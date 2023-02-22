@@ -1,0 +1,10 @@
+<% restaurants.each do |restaurant|%>
+  <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+  <p><%= restaurant.address %></p>
+  <p><%= restaurant.category %></p>
+  <p><%= link_to "Delete",
+  restaurant_path(restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"},
+  class: "btn btn-danger" %><p>
+  <hr>
+<% end %>

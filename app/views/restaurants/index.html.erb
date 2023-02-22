@@ -1,0 +1,7 @@
+<h1 class="text-center" >See all our restaurants</h1>
+
+<p><%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary"%></p>
+
+<ul class="list-group">
+  <%= render "display", restaurants: @restaurants.reverse %>
+</ul>
