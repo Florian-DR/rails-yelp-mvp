@@ -16,3 +16,12 @@ Restaurant.destroy_all
   )
   puts "Creating restaurant #{restaurant.id}..."
 end
+
+5.times do
+  review = Review.create(
+    content: "youpiiiiiiie",
+    rating: rand(0..5),
+    restaurant_id: Restaurant.first.id
+  )
+  puts "Creating reviews #{review.id}.."
+end

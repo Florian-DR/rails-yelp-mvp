@@ -4,3 +4,10 @@
 <p><%= @restaurant.category %></p>
 
 <%= link_to "back", restaurants_path, class: "btn btn-primary" %>
+
+<ul>
+ <% reviews = @restaurant.reviews %>
+  <%= render "display-reviews", reviews: reviews%>
+</ul>
+
+<%= link_to "Add a new reviews",  new_restaurant_review_path(@restaurant), class:"btn btn-primary" %>
